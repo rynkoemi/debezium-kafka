@@ -37,10 +37,10 @@ Once the containers are up and running, register the connector using the include
 
 ```bash
 curl -X POST -H "Content-Type: application/json" \
-     --data @debezium-connector.json \
+     --data @debezium.json \
      http://localhost:8083/connectors
 ```
 If successful, Debezium will begin streaming change events from the configured PostgreSQL database.
 
 ## 🛠️ Customization
-To change the connector settings (e.g. database name, username, table include list), edit the debezium-connector.json file before posting it to the Kafka Connect REST endpoint.
+To change the connector settings (e.g. database name, username, table include list), edit the debezium.json file before posting it to the Kafka Connect REST endpoint.
